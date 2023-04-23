@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { contactImg } from "../../assets/index";
 
@@ -11,19 +11,22 @@ const ContactLeft = () => {
         alt="contactImg"
       />
       <div className="flex flex-col gap-4">
-        <h3 className="text-3xl font-bold text-white">John Doe</h3>
-        <p className="text-lg font-normal text-gray-400">
-          MERN Stack Developer
+        <h3 className="text-3xl font-bold text-white">Shreyans Kumar Jain</h3>
+        <p className="text-lg font-normal text-gray-400">Assistant Professor</p>
+        <p className="text-base text-gray-400 tracking-wide">
+          Department of Pharmaceutical Engineering and Technology
         </p>
         <p className="text-base text-gray-400 tracking-wide">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          ipsam autem cumque, accusantium dicta odio.
+          Indian Institute of Technology (BHU)
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
-          Phone: <span className="text-lightText">+968 97859628</span>
+          Phone: <span className="text-lightText">+91 8764331736</span>
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
-          Email: <span className="text-lightText">noor.jsdivs@gmail.com</span>
+          Email:{" "}
+          <span className="text-lightText">
+            sjain.phe@iitbhu.ac.in, shreyansrj@gmail.com
+          </span>
         </p>
       </div>
       <div className="flex flex-col gap-4">
@@ -42,6 +45,6 @@ const ContactLeft = () => {
       </div>
     </div>
   );
-}
+};
 
-export default ContactLeft
+export default ContactLeft;
