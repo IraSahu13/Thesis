@@ -8,6 +8,7 @@ import { navLinksdata } from "../../constants";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div>
@@ -32,14 +33,85 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+
+          <li className="text-base font-normal text-gray-400 tracking-wide ">
+            <Link
+              onClick={() => setShowMenu(!showMenu)}
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer hover:text-designColor duration-300"
+            >
+              Publications
+            </Link>
+            {showMenu && (
+              <div
+                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-bodyColor shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+              >
+                <div class="py-1" role="none">
+                  {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
+                  <Link
+                    activeClass="active"
+                    to="/patents"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    Patents
+                  </Link>
+                  <Link
+                    activeClass="active"
+                    to="/research"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    Research Articles
+                  </Link>
+                  <Link
+                    activeClass="active"
+                    to="/chapters"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    Book Chapters
+                  </Link>
+                  <Link
+                    activeClass="active"
+                    to="/reviews"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    Reviews
+                  </Link>
+                </div>
+              </div>
+            )}
+          </li>
         </ul>
-        <span
+        {/* <span
           onClick={() => setShowMenu(!showMenu)}
-          className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
+          className="text-xl  bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
         >
           <FiMenu />
-        </span>
-        {showMenu && (
+        </span> */}
+        {/* {showMenu && (
           <div className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-gray-900 p-4 scrollbar-hide">
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
@@ -94,7 +166,7 @@ const Navbar = () => {
               </span>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
