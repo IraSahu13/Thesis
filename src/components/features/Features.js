@@ -18,7 +18,7 @@ const Features = () => {
           des="Isolation, characterization, standardization, qualitative and quantitative analysis of natural products"
         />
         <Card
-          title="Metabolomics and Proteomics hemanth"
+          title="Metabolomics and Proteomics"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           // icon={<AiFillAppstore />}
