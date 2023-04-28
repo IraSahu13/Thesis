@@ -20,6 +20,9 @@ function App() {
         <Route exact path="/chapters" element={<Chapters />} />
         <Route exact path="/reviews" element={<Reviews />} />
         <Route exact path="/grants" element={<Grants />} />
+        <Route exact path="/students" element={<Grants />} />
+        {/* <gallery/> */}
+        {/* <Route exact path="/grants" element={<Grants />} /> */}
       </Routes>
     </BrowserRouter>
   );

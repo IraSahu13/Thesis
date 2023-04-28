@@ -13,7 +13,7 @@ export const navLinksdata = [
     _id: 1002,
     title: "Grants",
     link: "/grants",
-  },
+  }
 ];
 export const researchData2023 = [
   {
