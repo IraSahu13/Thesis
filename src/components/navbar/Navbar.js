@@ -33,7 +33,6 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-
           <li className="text-base font-normal text-gray-400 tracking-wide ">
             <Link
               onClick={() => setShowMenu(!showMenu)}
@@ -104,6 +103,36 @@ const Navbar = () => {
               </div>
             )}
           </li>
+          <li
+              className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+              key={'gallery'}
+            >
+              <Link
+                activeClass="active"
+                to='/gallery'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+              Lab Gallery
+              </Link>
+            </li>
+            <li
+              className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+              key={'students'}
+            >
+              <Link
+                activeClass="active"
+                to='/students'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+              Students
+              </Link>
+            </li>
         </ul>
         {/* <span
           onClick={() => setShowMenu(!showMenu)}
