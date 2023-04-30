@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Patents from "./pages/Patents";
 import Research from "./pages/Research";
 import Reviews from "./pages/Reviews";
+import Stud from "./pages/Stud";
+import Gallery from "./pages/Gall";
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
         <Route exact path="/chapters" element={<Chapters />} />
         <Route exact path="/reviews" element={<Reviews />} />
         <Route exact path="/grants" element={<Grants />} />
-        <Route exact path="/students" element={<Grants />} />
+        <Route exact path="/students" element={<Stud />} />
+        <Route exact path="/gallery" element={<Gallery />} />
         {/* <gallery/> */}
         {/* <Route exact path="/grants" element={<Grants />} /> */}
       </Routes>
