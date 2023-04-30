@@ -7,7 +7,7 @@ import App1 from "./Gallery/src/App";
 function Gallery() {
     return (
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <App1/>
         {/* <Footer /> */}
       </div>

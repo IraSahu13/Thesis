@@ -7,7 +7,7 @@ import App1 from "./student/src/App.js";
 function Student() {
     return (
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <App1/>
         {/* <Footer /> */}
       </div>
