@@ -9,6 +9,7 @@ import Research from "./pages/Research";
 import Reviews from "./pages/Reviews";
 import Stud from "./pages/Stud";
 import Gallery from "./pages/Gall";
+import Monographs from "./pages/Monographs";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/grants" element={<Grants />} />
         <Route exact path="/students" element={<Stud />} />
         <Route exact path="/gallery" element={<Gallery />} />
+        <Route exact path="/monographs" element={<Monographs />} />
         {/* <gallery/> */}
         {/* <Route exact path="/grants" element={<Grants />} /> */}
       </Routes>
