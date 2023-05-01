@@ -28,6 +28,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                className="cursor-pointer hover:text-designColor duration-300"
               >
                 {title}
               </Link>
@@ -44,6 +45,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                className="cursor-pointer hover:text-designColor duration-300"
               >
               Lab Gallery
               </Link>
@@ -129,6 +131,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                className="cursor-pointer hover:text-designColor duration-300"
               >
               Students
               </Link>
