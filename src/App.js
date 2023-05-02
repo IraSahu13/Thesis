@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/grants" element={<Grants />} />
         <Route exact path="/students" element={<Stud />} />
         <Route exact path="/gallery" element={<Gallery />} />
-        <Route exact path="/monographs" element={<Monographs />} />
+        <Route exact path="/monographs/:id" element={<Monographs />} />
         {/* <gallery/> */}
         {/* <Route exact path="/grants" element={<Grants />} /> */}
       </Routes>

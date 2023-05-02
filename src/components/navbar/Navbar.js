@@ -4,11 +4,13 @@ import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { logo } from "../../assets/index";
-import { navLinksdata } from "../../constants";
+import { navLinksdata, monographs } from "../../constants";
+import { generatePath } from "react-router-dom";
 
 const Navbar = () => {
   const [showPublicationsMenu, setShowPublicationsMenu] = useState(false);
   const [showResourcesMenu, setShowResourcesMenu] = useState(false);
+  const [showMonographsMenu, setShowMonographsMenu] = useState(false);
 
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
@@ -35,22 +37,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li
-            className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
-            key={"gallery"}
-          >
-            <Link
-              activeClass="active"
-              to="/gallery"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="cursor-pointer hover:text-designColor duration-300"
-            >
-              Lab Gallery
-            </Link>
-          </li>
+
           <li className="text-base font-normal text-gray-400 tracking-wide ">
             <Link
               onClick={() => setShowPublicationsMenu(!showPublicationsMenu)}
@@ -61,11 +48,11 @@ const Navbar = () => {
               duration={500}
               className="cursor-pointer hover:text-designColor duration-300"
             >
-              Publications
+              PUBLICATIONS
             </Link>
             {showPublicationsMenu && (
               <div
-                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-bodyColor shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute z-10 mt-2 w-56 origin-top rounded-md bg-bodyColor shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
@@ -80,9 +67,9 @@ const Navbar = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                    class="block px-4 py-2  cursor-pointer hover:text-designColor duration-300"
                   >
-                    Patents
+                    PATENTS
                   </Link>
                   <Link
                     activeClass="active"
@@ -91,9 +78,9 @@ const Navbar = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                    class="block px-4 py-2  cursor-pointer hover:text-designColor duration-300"
                   >
-                    Research Articles
+                    RESERACH ARTICLES
                   </Link>
                   <Link
                     activeClass="active"
@@ -102,9 +89,9 @@ const Navbar = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                    class="block px-4 py-2  cursor-pointer hover:text-designColor duration-300"
                   >
-                    Book Chapters
+                    BOOK CHAPTERS
                   </Link>
                   <Link
                     activeClass="active"
@@ -113,9 +100,9 @@ const Navbar = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                    class="block px-4 py-2  cursor-pointer hover:text-designColor duration-300"
                   >
-                    Reviews
+                    REVIEWS
                   </Link>
                 </div>
               </div>
@@ -134,7 +121,7 @@ const Navbar = () => {
               duration={500}
               className="cursor-pointer hover:text-designColor duration-300"
             >
-              Students
+              STUDENTS
             </Link>
           </li>
           <li
@@ -150,7 +137,7 @@ const Navbar = () => {
               duration={500}
               className="cursor-pointer hover:text-designColor duration-300"
             >
-              Lab Gallery
+              LAB GALLERY
             </Link>
           </li>
           <li className="text-base font-normal text-gray-400 tracking-wide ">
@@ -163,7 +150,7 @@ const Navbar = () => {
               duration={500}
               className="cursor-pointer hover:text-designColor duration-300"
             >
-              Resourses
+              RESOURCES
             </Link>
             {showResourcesMenu && (
               <div
@@ -176,16 +163,31 @@ const Navbar = () => {
                 <div class="py-1" role="none">
                   {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
                   <Link
+                    onClick={() => setShowMonographsMenu(!showMonographsMenu)}
                     activeClass="active"
-                    to="/monographs"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                    class="block px-4 py-2  cursor-pointer hover:text-designColor duration-300"
                   >
-                    Monographs
+                    MONOGRAPHS
                   </Link>
+                  {showMonographsMenu &&
+                    monographs.map(({ _id, title }) => (
+                      <Link
+                        activeClass="active"
+                        key={_id}
+                        to={generatePath("//monographs/:_id", { _id })}
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        class="block ml-3 px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                      >
+                        {title}
+                      </Link>
+                    ))}
                   <Link
                     activeClass="active"
                     to="/research"
@@ -193,9 +195,9 @@ const Navbar = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                    class="block px-4 py-2  cursor-pointer hover:text-designColor duration-300"
                   >
-                    Natural Products
+                    NATURAL PRODUCTS
                   </Link>
                   <Link
                     activeClass="active"
@@ -204,20 +206,9 @@ const Navbar = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                    class="block px-4 py-2  cursor-pointer text-grey-300 hover:text-designColor duration-300"
                   >
-                    NMR Data
-                  </Link>
-                  <Link
-                    activeClass="active"
-                    to="/reviews"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
-                  >
-                    Reviews
+                    NMR DATA
                   </Link>
                 </div>
               </div>

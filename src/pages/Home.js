@@ -17,7 +17,7 @@ function Home() {
         <Banner />
         <Features />
         <Resume />
-        <Monographs />
+        {/* <Monographs /> */}
         {/* <Testimonial /> */}
         <Contact />
         <Footer />

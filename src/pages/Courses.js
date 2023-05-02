@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../components/layouts/Title";
 import Navbar from "../components/navbar/Navbar";
 import { courses } from "../constants";
+import Footer from "../components/footer/Footer";
 function Courses() {
   return (
     <div className="w-full h-auto bg-bodyColor text-lightText px-4">
@@ -91,6 +92,7 @@ function Courses() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

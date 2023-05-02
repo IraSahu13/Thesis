@@ -14,22 +14,22 @@ const Features = () => {
       <Title title="Features" des="Research Interest" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
         <Card
-          title="Natural Product"
+          title="Natural Products"
           des="Isolation, characterization, standardization, qualitative and quantitative analysis of natural products"
         />
         <Card
-          title="Metabolomics and Proteomics"
+          title="Metabolomics"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           // icon={<AiFillAppstore />}
         />
         <Card
-          title="Lead identification"
+          title="Medicinal Chemistry of Natural Products"
           des="Design and Synthesis of small molecule libraries for lead identification or optimization"
           // icon={<SiProgress />}
         />
         <Card
-          title="Development of herbal products"
+          title="Analytical Methodologies"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           // icon={<FaMobile />}
@@ -39,11 +39,6 @@ const Features = () => {
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           // icon={<SiAntdesign />}
-        />
-        <Card
-          title="Synthesis of bioactive natural products"
-          des="Isolation, structure determination and total synthesis of natural products"
-          // icon={<FaGlobe />}
         />
       </div>
     </section>
