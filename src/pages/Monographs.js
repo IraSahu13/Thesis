@@ -101,6 +101,50 @@ function Monographs() {
           </div>
         </div>
       </div>
+      {monographData.morphology && (
+        <>
+          <h2 className="text-4xl font-bold ml-20 mt-10">Morphology:</h2>
+          <div className="max-w-screen-xl mx-auto">
+            <div class="flex flex-col">
+              <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                  <div class="overflow-hidden">
+                    <table class="min-w-full">
+                      <tbody>
+                        {monographData.morphology.map((items, index) =>
+                          index % 2 === 0 ? (
+                            <tr class="bg-gray-100 border-b">
+                              {items.map((item, index) => (
+                                <td
+                                  class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-900"
+                                  key={index}
+                                >
+                                  {item}
+                                </td>
+                              ))}
+                            </tr>
+                          ) : (
+                            <tr class="bg-gray-200 border-b">
+                              {items.map((item, index) => (
+                                <td
+                                  class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-900"
+                                  key={index}
+                                >
+                                  {item}
+                                </td>
+                              ))}
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
       <h2 className="text-4xl font-bold ml-20 mt-10">Literature survey</h2>
       <h4 className="text-1xl font-bold ml-20 mt-10">
         Clinical trial reports with reference to Clinicaltrial.gov
@@ -190,7 +234,86 @@ function Monographs() {
           </div>
         </div>
       </div>
-
+      {monographData.preclinical && (
+        <>
+          <h2 className="text-4xl font-bold ml-20 mt-10">
+            Preclinical and animal studies:
+          </h2>
+          <div className="max-w-screen-xl mx-auto">
+            <div class="flex flex-col">
+              <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                  <div class="overflow-hidden">
+                    <table class="min-w-full">
+                      <thead class="bg-white border-b">
+                        <tr>
+                          <th
+                            scope="col"
+                            class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                          >
+                            SL. No.
+                          </th>
+                          <th
+                            scope="col"
+                            class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                          >
+                            Pharmacological action
+                          </th>
+                          <th
+                            scope="col"
+                            class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                          >
+                            Intervention
+                          </th>
+                          <th
+                            scope="col"
+                            class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                          >
+                            Study model/design
+                          </th>
+                          <th
+                            scope="col"
+                            class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                          >
+                            Reference
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {monographData.preclinical.map((items, index) =>
+                          index % 2 === 0 ? (
+                            <tr class="bg-gray-100 border-b">
+                              {items.map((item, index) => (
+                                <td
+                                  class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-900"
+                                  key={index}
+                                >
+                                  {item}
+                                </td>
+                              ))}
+                            </tr>
+                          ) : (
+                            <tr class="bg-gray-200 border-b">
+                              {items.map((item, index) => (
+                                <td
+                                  class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-900"
+                                  key={index}
+                                >
+                                  {item}
+                                </td>
+                              ))}
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
       <Footer />
     </div>
   );

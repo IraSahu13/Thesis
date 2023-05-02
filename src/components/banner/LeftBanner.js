@@ -31,10 +31,9 @@ const LeftBanner = () => {
         </h2> */}
         <p className="text-base font-bodyFont leading-6 tracking-wide">
           An Assistant Professor in Department of Pharmaceutical Engineering and
-          Technology at Indian Institute of Technology (BHU), Varanasi. I have
-          remarkable experience and research interest in the field for
-          isolation, characterization, standardization, qualitative and
-          quantitative analysis of natural products
+          Technology at Indian Institute of Technology (BHU), Varanasi. My
+          research focuses on the discovery, medicinal chemistry of natural
+          products, and metabolomics.
         </p>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
