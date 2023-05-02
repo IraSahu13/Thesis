@@ -122,43 +122,43 @@ function Monographs() {
                           <tr>
                             <th
                               scope="col"
-                              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                              class="text-sm font-medium text-gray-900 px-3 py-4 text-left"
                             >
                               SL. no.
                             </th>
                             <th
                               scope="col"
-                              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                              class="text-sm font-medium text-gray-900 px-3 py-4 text-left"
                             >
                               Condition/Disease
                             </th>
                             <th
                               scope="col"
-                              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                              class="text-sm font-medium text-gray-900 px-3 py-4 text-left"
                             >
                               Intervention
                             </th>
                             <th
                               scope="col"
-                              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                              class="text-sm font-medium text-gray-900 px-3 py-4 text-left"
                             >
                               Phases
                             </th>
                             <th
                               scope="col"
-                              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                              class="text-sm font-medium text-gray-900 px-3 py-4 text-left"
                             >
                               Party responsible
                             </th>
                             <th
                               scope="col"
-                              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                              class="text-sm font-medium text-gray-900 px-3 py-4 text-left"
                             >
                               Study design
                             </th>
                             <th
                               scope="col"
-                              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                              class="text-sm font-medium text-gray-900 px-3 py-4 text-left"
                             >
                               Identifier
                             </th>
@@ -170,7 +170,7 @@ function Monographs() {
                               <tr class="bg-gray-100 border-b">
                                 {items.map((item, index) => (
                                   <td
-                                    class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-900"
+                                    class="px-3 py-4 whitespace-nowrap text-sm font-light text-gray-900"
                                     key={index}
                                   >
                                     {item}
@@ -181,7 +181,7 @@ function Monographs() {
                               <tr class="bg-gray-200 border-b">
                                 {items.map((item, index) => (
                                   <td
-                                    class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-900"
+                                    class="px-3 py-4 whitespace-nowrap text-sm font-light text-gray-900"
                                     key={index}
                                   >
                                     {item}

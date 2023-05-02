@@ -29,8 +29,8 @@ function Grants() {
           Proteomics Approaches By DST, for three years.
         </p>
         <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-          4. 4.CRG/2022/001637 titled Targeting CDK9 by coumarin based
-          inhibitors: Design, Preparation and Biological Evaluation by SERB- CRG
+          4. CRG/2022/001637 titled Targeting CDK9 by coumarin based inhibitors:
+          Design, Preparation and Biological Evaluation by SERB- CRG
         </p>
       </div>
       <h2 className="text-4xl font-bold ml-20 mt-10">As Co-Investigator</h2>

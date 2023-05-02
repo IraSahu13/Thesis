@@ -19,28 +19,31 @@ function Reviews() {
             1. Journal of Organic Chemistry (ACS)
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            2. ACS-Omega Current Topics in Medicinal Chemistry (Bentham)
+            2. ACS-Omega
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            3. Mini-reviews in medicinal chemistry (Bentham)
+            3. Current Topics in Medicinal Chemistry (Bentham)
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            4. Natural Product Research (T&F)
+            4. Mini-reviews in medicinal chemistry (Bentham)
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            5. Journal of Biomolecular Structure and Dynamics (T&F)
+            5. Natural Product Research (T&F)
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            6. Organic & Biomolecular Chemistry (RSC)
+            6. Journal of Biomolecular Structure and Dynamics (T&F)
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            7. Molecular Diversity (Springer)
+            7. Organic & Biomolecular Chemistry (RSC)
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            8. Journal of Herbal Medicine (Elsevier)
+            8. Molecular Diversity (Springer)
           </p>
           <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
-            9. Journal of Chromatographic Science
+            9. Journal of Herbal Medicine (Elsevier)
+          </p>
+          <p className="text-base font-bodyFont leading-6 tracking-wide mt-3">
+            10. Journal of Chromatographic Science
           </p>
         </div>
         <Footer />

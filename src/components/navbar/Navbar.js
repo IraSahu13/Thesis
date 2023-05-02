@@ -7,7 +7,8 @@ import { logo } from "../../assets/index";
 import { navLinksdata } from "../../constants";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showPublicationsMenu, setShowPublicationsMenu] = useState(false);
+  const [showResourcesMenu, setShowResourcesMenu] = useState(false);
 
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
@@ -15,7 +16,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
       </div>
       <div>
-        <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
+        <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10 mr-10">
           {navLinksdata.map(({ _id, title, link }) => (
             <li
               className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
@@ -35,24 +36,24 @@ const Navbar = () => {
             </li>
           ))}
           <li
-              className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
-              key={'gallery'}
+            className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+            key={"gallery"}
+          >
+            <Link
+              activeClass="active"
+              to="/gallery"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer hover:text-designColor duration-300"
             >
-              <Link
-                activeClass="active"
-                to='/gallery'
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="cursor-pointer hover:text-designColor duration-300"
-              >
               Lab Gallery
-              </Link>
-            </li>
+            </Link>
+          </li>
           <li className="text-base font-normal text-gray-400 tracking-wide ">
             <Link
-              onClick={() => setShowMenu(!showMenu)}
+              onClick={() => setShowPublicationsMenu(!showPublicationsMenu)}
               activeClass="active"
               spy={true}
               smooth={true}
@@ -62,7 +63,7 @@ const Navbar = () => {
             >
               Publications
             </Link>
-            {showMenu && (
+            {showPublicationsMenu && (
               <div
                 class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-bodyColor shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu"
@@ -70,7 +71,7 @@ const Navbar = () => {
                 aria-labelledby="menu-button"
                 tabindex="-1"
               >
-                <div class="py-1" role="none">
+                <div class="py-2" role="none">
                   {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
                   <Link
                     activeClass="active"
@@ -120,22 +121,108 @@ const Navbar = () => {
               </div>
             )}
           </li>
-            <li
-              className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
-              key={'students'}
+          <li
+            className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+            key={"students"}
+          >
+            <Link
+              activeClass="active"
+              to="/students"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer hover:text-designColor duration-300"
             >
-              <Link
-                activeClass="active"
-                to='/students'
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="cursor-pointer hover:text-designColor duration-300"
-              >
               Students
-              </Link>
-            </li>
+            </Link>
+          </li>
+          <li
+            className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+            key={"gallery"}
+          >
+            <Link
+              activeClass="active"
+              to="/gallery"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer hover:text-designColor duration-300"
+            >
+              Lab Gallery
+            </Link>
+          </li>
+          <li className="text-base font-normal text-gray-400 tracking-wide ">
+            <Link
+              onClick={() => setShowResourcesMenu(!showResourcesMenu)}
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="cursor-pointer hover:text-designColor duration-300"
+            >
+              Resourses
+            </Link>
+            {showResourcesMenu && (
+              <div
+                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-bodyColor shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+              >
+                <div class="py-1" role="none">
+                  {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
+                  <Link
+                    activeClass="active"
+                    to="/monographs"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    Monographs
+                  </Link>
+                  <Link
+                    activeClass="active"
+                    to="/research"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    Natural Products
+                  </Link>
+                  <Link
+                    activeClass="active"
+                    to="/chapters"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    NMR Data
+                  </Link>
+                  <Link
+                    activeClass="active"
+                    to="/reviews"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    class="block px-4 py-2 text-sm cursor-pointer hover:text-designColor duration-300"
+                  >
+                    Reviews
+                  </Link>
+                </div>
+              </div>
+            )}
+          </li>
         </ul>
         {/* <span
           onClick={() => setShowMenu(!showMenu)}
