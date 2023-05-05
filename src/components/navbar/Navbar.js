@@ -190,7 +190,7 @@ const Navbar = () => {
                     ))}
                   <Link
                     activeClass="active"
-                    to="/research"
+                    to="/NaturalProducts"
                     spy={true}
                     smooth={true}
                     offset={-70}
