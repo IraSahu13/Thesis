@@ -11,6 +11,9 @@ import Stud from "./pages/Stud";
 import Gallery from "./pages/Gall";
 import Monographs from "./pages/Monographs";
 import Natural from "./pages/Naturalpro";
+import Nmr from "./pages/Nmr";
+import Test from "./pages/Test";
+// import Nmr2 from "./pages/Nmr2";
 
 function App() {
   return (
@@ -28,6 +31,7 @@ function App() {
         <Route exact path="/gallery" element={<Gallery />} />
         <Route exact path="/monographs/:id" element={<Monographs />} />
         <Route exact path="/NaturalProducts" element={<Natural />} />
+        {/* <Route exact path="/Nmr_data" element={<Nmr />} /> */}
         {/* <gallery/> */}
         {/* <Route exact path="/grants" element={<Grants />} /> */}
       </Routes>
