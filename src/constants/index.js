@@ -842,7 +842,7 @@ export const courses = [
 
 
 export const NPdata = [
-  [
+    [
     "1",
     "rutin",
     "C[C@H]1[C@@H]([C@H]([C@O",

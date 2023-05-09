@@ -188,6 +188,7 @@ const Navbar = () => {
                         {title}
                       </Link>
                     ))}
+                    
                   <Link
                     activeClass="active"
                     to="/NaturalProducts"
@@ -201,7 +202,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     activeClass="active"
-                    to="/chapters"
+                    to="/Nmr_data"
                     spy={true}
                     smooth={true}
                     offset={-70}
